@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edit this template
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here asd
-        ?>
-    </body>
-</html>
+<?php
+
+include './class/autoload.php';
+
+$categoryList = category::listar();
+//print_r($categoryList);
+$productList = product::listar();
+include './views/home.html';
