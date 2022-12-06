@@ -20,12 +20,12 @@ class product {
             $db = new database("mysql", "localhost", "3306", "inventory", "root", "");
             $resp = $db->select("product", "id_product = ?", array($id_product));
             
-            if(isset($resp[0]['$id_product'])) {
-                $this->id_product = $resp[0]['$id_product'];
-                $this->name_product = $resp[0]['$name_product'];
-                $this->image_product = $resp[0]['$image_product'];
-                $this->description_product = $resp[0]['$description_product'];
-                $this->id_category = $resp[0]['$id_category'];
+            if(isset($resp[0]['ID_PRODUCT'])) {
+                $this->id_product = $resp[0]['ID_PRODUCT'];
+                $this->name_product = $resp[0]['NAME_PRODUCT'];
+                $this->image_product = $resp[0]['IMAGE_PRODUCT'];
+                $this->description_product = $resp[0]['DESCRIPTION_PRODUCT'];
+                $this->id_category = $resp[0]['ID_CATEGORY'];
                 $this->_exists = true;
             }
             

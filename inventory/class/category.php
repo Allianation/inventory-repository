@@ -16,10 +16,10 @@ class category {
             //$db = new database("pgsql", "localhost", "5432", "inventory", "postgres", "admin");
             $db = new database("mysql", "localhost", "3306", "inventory", "root", "");
             $resp = $db->select("category", "id_category = ?", array($id_category));
-            
-            if(isset($resp[0]['$id_category'])) {
-                $this->id_category = $resp[0]['$id_category'];
-                $this->name_category = $resp[0]['$name_category'];
+ 
+            if(isset($resp[0]['ID_CATEGORY'])) {
+                $this->id_category = $resp[0]['ID_CATEGORY'];
+                $this->name_category = $resp[0]['NAME_CATEGORY'];
                 $this->_exists = true;
             }
             

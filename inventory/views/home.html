@@ -78,11 +78,12 @@
                 </thead>
                 <tbody>
                     <?php foreach ($productList as $product) { ?>
-                     <tr>
+                    <tr>
                         <td><?php echo $product['ID_PRODUCT'] ?></td>
                         <td><?php echo $product['NAME_PRODUCT'] ?></td>
                         <td><?php echo $product['DESCRIPTION_PRODUCT'] ?></td>
-                        <td><?php echo $product['ID_CATEGORY'] ?></td>
+                        <?php $cat = new category($product['ID_CATEGORY'])?>
+                        <td><?php echo $cat->name_category ?></td>
                         <td><?php echo '<img src="' . $product['IMAGE_PRODUCT'] . '"  width="30" height="30" />' ?></td>
                     </tr>
                     <?php } ?>
